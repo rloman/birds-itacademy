@@ -34,6 +34,8 @@ public class Animal {
 
     private boolean male;
 
+    private int eggs;
+
 
     {
         name = "onbekend";
@@ -68,4 +70,11 @@ public class Animal {
     }
 
 
+    public void setEggs(int eggs) {
+        this.eggs = eggs;
+    }
+
+    public int getEggs() {
+        return eggs;
+    }
 }

@@ -1,11 +1,38 @@
 package nl.cjib.birds.loops;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ForTrainer {
 
     public static void main(String[] args) {
+
+        // 8-11-1962
+
+        LocalDate birthDayFrank = LocalDate.of(1962, 11, 8);
+
+        long aantalDagenFrankOpAarde = ChronoUnit.DAYS.between(birthDayFrank, LocalDate.now());
+
+        System.out.println(aantalDagenFrankOpAarde);
+
+        long jarenFrank = ChronoUnit.YEARS.between(birthDayFrank, LocalDate.now());
+
+
+
+        System.out.println(jarenFrank);
+
+        Period periodeFrank = Period.between(birthDayFrank, LocalDate.now());
+
+        System.out.println(periodeFrank);
+
+        System.out.println(periodeFrank.getYears()+", "+periodeFrank.getMonths()+", "+periodeFrank.getDays());
+
+        // you could use System.out.printf() or String.format
+
         for (int i = 0; i < 10; i++) {
 
             if (i == 5) {
